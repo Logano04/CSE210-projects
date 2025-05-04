@@ -5,12 +5,23 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Sandbox World!");
-        Console.Write("Please enter your name: ");
-        string firstName = Console.ReadLine();
-        Console.WriteLine($"Your first name is {firstName}.");
+        
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine($"Hello Sandbox World! {i}");
+        }
 
-        Console.Write("Please enter your last name: ");
-        string lastName = Console.ReadLine();
-        Console.WriteLine($"Your last name is {lastName}.");
+    //    Random randomGenerator = new Random();
+    //    int randomNumber = new randomGenerator(1,100);
+
+        List<int> myNumbers = new List<int>();
+        myNumbers.Add(1);
+        myNumbers.Add(23);
+        myNumbers.Add(-8);
+
+        foreach(int i in myNumbers)
+        {
+            Console.WriteLine(i);
+        }
     }
 }
