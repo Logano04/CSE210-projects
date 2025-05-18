@@ -1,27 +1,40 @@
 using System;
 
+class Circle
+{
+    private double _radius;
+    public void SetRadius(double radius)
+    {
+        if (radius < 0)
+        {
+            Console.WriteLine("Error");
+            return;
+        }
+        _radius = radius;
+    }
+
+    public double GetRadius()
+    {
+        return _radius;
+    }
+
+    public double GetArea()
+    {
+        return Math.PI * _radius * _radius;
+    }
+}
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Sandbox World!");
         
-        for (int i = 0; i < 10; i++)
-        {
-            Console.WriteLine($"Hello Sandbox World! {i}");
-        }
+        Circle myCircle = new Circle();
+        myCircle.SetRadius(10);
+        Console.WriteLine($"Radius: {myCircle.GetRadius()}");
+        Console.WriteLine($"Radius: {myCircle.GetArea()}");
 
     //    Random randomGenerator = new Random();
     //    int randomNumber = new randomGenerator(1,100);
-
-        List<int> myNumbers = new List<int>();
-        myNumbers.Add(1);
-        myNumbers.Add(23);
-        myNumbers.Add(-8);
-
-        foreach(int i in myNumbers)
-        {
-            Console.WriteLine(i);
-        }
     }
 }
