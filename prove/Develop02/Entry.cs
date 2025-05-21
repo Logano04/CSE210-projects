@@ -7,7 +7,11 @@ public class Entry
         "What was the strongest emotion I felt today?",
         "If I had one thing I could do over today, what would it be?",
     };
-    public string Prompt { get; set; }
+    public string Prompt;
+
+    public string Date;
+
+    public string EntryText;
     public static string RandomPrompt()
     {
         Random random = new Random();
@@ -15,13 +19,13 @@ public class Entry
         string prompt = prompts[index];
         return prompt;
     }
-    public static (DateTime date, string prompt, string entry) NewEntry()
+    public void NewEntry()
     {
         DateTime date = DateTime.Now;
-        string prompt = RandomPrompt();
-        Console.WriteLine(prompt);
+        Date = date.ToString("dddd MM dd yyyy");
+        Prompt = RandomPrompt();
+        Console.WriteLine(Prompt);
         Console.Write("> ");
-        string entry = Console.ReadLine();
-        return (date, prompt, entry);
+        EntryText = Console.ReadLine();
     }
 }
