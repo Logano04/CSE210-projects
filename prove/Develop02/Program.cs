@@ -28,7 +28,7 @@ class Program
     }
     static void Main(string[] args)
     {
-        Journal journal = new Journal();
+        Journal journal = new Journal(); 
         bool keepGoing = true;
 
         while (keepGoing)
