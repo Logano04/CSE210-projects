@@ -4,19 +4,42 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        Console.WriteLine("hsjkwsdhgvjah");
+        int sleepTime = 250;
+
+        DateTime currentTime = DateTime.Now;
+        DateTime endTime = currentTime.AddSeconds(20);
+
+        int count = 9;
+
+        while (DateTime.Now < endTime) 
+        {
+            Console.Write(count--);
+            Thread.Sleep(1000);
+            Console.Write("\b");
+        }
+
+        string animationString2 = "-+\\|/";
+        int index = 0;
+
+        while (DateTime.Now < endTime)
+        {
+            Console.Write(animationString2[index++ % animationString2.Length]);
+            Thread.Sleep(sleepTime);
+            Console.Write("\b");
+        }
+
         
-        Circle myCircle = new Circle();
-        myCircle.SetRadius(10);
-        Console.WriteLine($"Radius: {myCircle.GetRadius()}");
-        Console.WriteLine($"Radius: {myCircle.GetArea()}");
-
-        Cyllinder myCyllinder = new Cyllinder();
-        myCyllinder.SetCircle(myCircle);
-        myCyllinder.SetHeight(10);
-        Console.WriteLine($"Volume: {myCyllinder.GetVolume()}");
-
-    //    Random randomGenerator = new Random();
-    //    int randomNumber = new randomGenerator(1,100);
+        string animationString = "(^o^)(-_-)";
+        
+        while (DateTime.Now < endTime)
+        {
+            Console.Write(animationString[0..5]);
+            Thread.Sleep(sleepTime);
+            Console.Write("\b\b\b\b\b");
+            Console.Write(animationString[5..]);
+            Thread.Sleep(sleepTime);
+            Console.Write("\b\b\b\b\b");
+        }
     }
 }

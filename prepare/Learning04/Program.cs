@@ -1,9 +1,12 @@
 using System;
+using System.Reflection.Metadata;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning04 World!");
+        WritingAssignment writing = new WritingAssignment("Bob", "Gender studies", "");
+        Console.WriteLine(writing.GetSummary());
+        Console.WriteLine(writing.GetWritingInformation());
     }
 }

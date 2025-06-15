@@ -6,6 +6,7 @@ class Program
     {
         if (input == "q")
         {
+            Console.WriteLine("AAaaahhhhHh");
             return false;
         }
         else
@@ -15,7 +16,7 @@ class Program
     }
     static void Main(string[] args)
     {
-        Word word = new Word();
+        // Word word = new Word();
 
         bool keepGoing = true;
 
