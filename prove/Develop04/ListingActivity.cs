@@ -3,7 +3,7 @@ public class ListingActivity : Activity
 {
     private string activityName = "Listing";
     private string activityDescription = "This activity will help you reflect on the good things in your life.";
-    private string[] prompts = { "How have you felt the Holy Ghost this month?", "bruh" };
+    private string[] prompts = { "How have you felt the Holy Ghost this month?", "What brought you peace this month?", "How have you served others this month?", "What are you thankful for today?" };
     public ListingActivity() : base("Listing", "This activity will help you reflect on the good things in your life.")
     {
     }

@@ -19,7 +19,7 @@ class Program
             case 3:
                 ListingActivity.run();
                 break;
-            case 5:
+            case 4:
                 return false;
         }
         return true;
