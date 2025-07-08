@@ -1,6 +1,7 @@
 public class ChecklistGoal : Goal
 {
     private int bonusPoints;
+    private int requiredCompletions;
     private int timesCompleted;
 
     public override void createGoal()
@@ -10,5 +11,8 @@ public class ChecklistGoal : Goal
     public override void recordEvent()
     {
         timesCompleted++;
+        if (timesCompleted >= requiredCompletions){
+            completed = true;
+        }
     }
 }

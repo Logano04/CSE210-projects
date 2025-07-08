@@ -1,9 +1,9 @@
 public class Goal
 {
-    private string goalName;
-    private string goalDescription;
-    private int pointAmount;
-    private bool completed = false;
+    public string goalName;
+    public string goalDescription;
+    public int pointAmount;
+    public bool completed = false;
 
     public virtual void createGoal()
     {
