@@ -14,17 +14,7 @@ public class Goals
     {
         foreach (Goal Goal in goalsList)
         {
-            if (Goal.completed == true)
-            {
-                Console.Write("[X]");
-            }
-            else
-            {
-                Console.Write("[ ]");
-            }
-            Console.Write($"{Goal.goalName} ");
-            Console.Write($"{Goal.goalDescription} ");
-            Console.WriteLine();
+            Goal.printStatus();
         }
     }
 }

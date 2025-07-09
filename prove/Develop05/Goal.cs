@@ -15,13 +15,37 @@ public class Goal
         pointAmount = int.Parse(Console.ReadLine());
     }
 
-    public virtual void recordEvent()
+    public virtual int recordEvent()
     {
-        completed = true;
+        if (completed == true)
+        {
+            return 0;
+        }
+        else
+        {
+            completed = true;
+            return pointAmount;
+        }
+
+    }
+
+    public virtual void printStatus()
+    {
+        if (completed == true)
+            {
+                Console.Write("[X]");
+            }
+            else
+            {
+                Console.Write("[ ]");
+            }
+            Console.Write($"{goalName} ");
+            Console.Write($"{goalDescription} ");
+            Console.WriteLine();
     }
 
     public void saveGoal()
     {
-        
+
     }
 }

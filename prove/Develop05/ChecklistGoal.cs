@@ -6,13 +6,50 @@ public class ChecklistGoal : Goal
 
     public override void createGoal()
     {
-        base.createGoal();
+        Console.WriteLine("What is the name of your goal?:");
+        goalName = Console.ReadLine();
+        Console.WriteLine("Give a short description of your goal:");
+        goalDescription = Console.ReadLine();
+        Console.WriteLine("How many points is this goal worth?:");
+        pointAmount = int.Parse(Console.ReadLine());
+        Console.WriteLine("How many times must this goal be completed to receive a bonus?");
+        requiredCompletions = int.Parse(Console.ReadLine());
+        Console.WriteLine("what is the bonus point amount?");
+        bonusPoints = int.Parse(Console.ReadLine());
     }
-    public override void recordEvent()
+    public override int recordEvent()
     {
-        timesCompleted++;
-        if (timesCompleted >= requiredCompletions){
-            completed = true;
+        if (completed == true)
+        {
+            return 0;
         }
+        else
+        {
+            timesCompleted++;
+            if (timesCompleted >= requiredCompletions)
+            {
+                completed = true;
+                return bonusPoints;
+            }
+            else
+            {
+                return pointAmount;
+            }
+        }
+    }
+    public override void printStatus()
+    {
+        if (completed == true)
+            {
+                Console.Write("[X]");
+            }
+            else
+            {
+                Console.Write("[ ]");
+            }
+        Console.Write($"{goalName} ");
+        Console.Write($"{goalDescription} ");
+        Console.Write($"-- Currently completed: {timesCompleted}/{requiredCompletions}");
+        Console.WriteLine();
     }
 }

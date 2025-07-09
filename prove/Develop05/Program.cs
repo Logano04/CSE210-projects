@@ -4,6 +4,7 @@ class Program
 {
     static Goal Goal = new Goal();
     static Goals Goals = new Goals();
+    public int score;
     static bool MenuSelect(int selection)
     {
         switch (selection)
@@ -25,11 +26,13 @@ class Program
                 {
                     EternalGoal EternalGoal = new EternalGoal();
                     EternalGoal.createGoal();
+                    Goals.addGoal(EternalGoal);
                 }
                 else if (goalTypeSelect == 3)
                 {
                     ChecklistGoal ChecklistGoal = new ChecklistGoal();
                     ChecklistGoal.createGoal();
+                    Goals.addGoal(ChecklistGoal);
                 }
                 else
                 {
@@ -48,6 +51,8 @@ class Program
                 break;
             case 5:
                 Console.WriteLine("case 5");
+                Console.WriteLine("Record event for which goal?");
+
                 break;
             case 6:
                 return false;
