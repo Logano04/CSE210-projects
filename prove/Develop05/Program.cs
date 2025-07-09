@@ -52,7 +52,7 @@ class Program
             case 5:
                 Console.WriteLine("case 5");
                 Console.WriteLine("Record event for which goal?");
-
+                Goals.listGoals();
                 break;
             case 6:
                 return false;

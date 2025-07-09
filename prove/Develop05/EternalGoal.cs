@@ -23,4 +23,19 @@ public class EternalGoal : Goal
             return pointAmount;
         }
     }
+    public override void printStatus()
+    {
+        if (completed == true)
+            {
+                Console.Write("[X]");
+            }
+            else
+            {
+                Console.Write("[ ]");
+            }
+        Console.Write($"{goalName} ");
+        Console.Write($"{goalDescription} ");
+        Console.Write($"-- Times completed: {timesCompleted}");
+        Console.WriteLine();
+    }
 }

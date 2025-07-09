@@ -17,4 +17,18 @@ public class Goals
             Goal.printStatus();
         }
     }
+    public void listGoals()
+    {
+        //list goals for recordEvent selection
+        int goalIndex = 1;
+        foreach (Goal Goal in goalsList)
+        {
+            Console.Write($"{goalIndex}. {Goal.goalName}, {Goal.goalDescription}");
+            goalIndex++;
+        }
+        int goalSelection = int.Parse(Console.ReadLine());
+        goalSelection--;
+        Goal recordingGoal = goalsList[goalSelection];
+        recordingGoal.recordEvent();
+        }
 }
