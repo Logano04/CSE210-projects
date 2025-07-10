@@ -27,13 +27,13 @@ public class EternalGoal : Goal
     {
         if (completed == true)
             {
-                Console.Write("[X]");
+                Console.Write("[X] - ");
             }
             else
             {
-                Console.Write("[ ]");
+                Console.Write("[ ] - ");
             }
-        Console.Write($"{goalName} ");
+        Console.Write($"{goalName}: ");
         Console.Write($"{goalDescription} ");
         Console.Write($"-- Times completed: {timesCompleted}");
         Console.WriteLine();

@@ -41,13 +41,13 @@ public class ChecklistGoal : Goal
     {
         if (completed == true)
             {
-                Console.Write("[X]");
+                Console.Write("[X] - ");
             }
             else
             {
-                Console.Write("[ ]");
+                Console.Write("[ ] - ");
             }
-        Console.Write($"{goalName} ");
+        Console.Write($"{goalName}: ");
         Console.Write($"{goalDescription} ");
         Console.Write($"-- Currently completed: {timesCompleted}/{requiredCompletions}");
         Console.WriteLine();

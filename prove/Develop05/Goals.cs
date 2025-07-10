@@ -23,12 +23,18 @@ public class Goals
         int goalIndex = 1;
         foreach (Goal Goal in goalsList)
         {
-            Console.Write($"{goalIndex}. {Goal.goalName}, {Goal.goalDescription}");
+            Console.Write($"{goalIndex}. {Goal.goalName}: {Goal.goalDescription} ");
             goalIndex++;
         }
+        Console.WriteLine();
         int goalSelection = int.Parse(Console.ReadLine());
         goalSelection--;
         Goal recordingGoal = goalsList[goalSelection];
-        recordingGoal.recordEvent();
-        }
+        points += recordingGoal.recordEvent();
+    }
+
+    public void printPoints()
+    {
+        Console.WriteLine($"Points: {points}");
+    }
 }

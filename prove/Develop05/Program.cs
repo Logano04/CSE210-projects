@@ -4,7 +4,6 @@ class Program
 {
     static Goal Goal = new Goal();
     static Goals Goals = new Goals();
-    public int score;
     static bool MenuSelect(int selection)
     {
         switch (selection)
@@ -57,6 +56,7 @@ class Program
             case 6:
                 return false;
         }
+        Goals.printPoints();
         return true;
     }
     static void Main(string[] args)
