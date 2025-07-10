@@ -3,6 +3,7 @@ public class ChecklistGoal : Goal
     private int bonusPoints;
     private int requiredCompletions;
     private int timesCompleted;
+    public new string goalType = "ChecklistGoal";
 
     public override void createGoal()
     {
@@ -40,16 +41,21 @@ public class ChecklistGoal : Goal
     public override void printStatus()
     {
         if (completed == true)
-            {
-                Console.Write("[X] - ");
-            }
-            else
-            {
-                Console.Write("[ ] - ");
-            }
+        {
+            Console.Write("[X] - ");
+        }
+        else
+        {
+            Console.Write("[ ] - ");
+        }
         Console.Write($"{goalName}: ");
         Console.Write($"{goalDescription} ");
         Console.Write($"-- Currently completed: {timesCompleted}/{requiredCompletions}");
         Console.WriteLine();
+    }
+    public override string getStringInfo()
+    {
+        string info = $"{goalType}:{goalName}&{goalDescription}&{pointAmount}&{completed}&{bonusPoints}&{requiredCompletions}&{timesCompleted}";
+        return info;
     }
 }

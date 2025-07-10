@@ -1,6 +1,7 @@
 public class EternalGoal : Goal
 {
     private int timesCompleted = 0;
+    public new string goalType = "EternalGoal";
 
     public override void createGoal()
     {
@@ -26,16 +27,21 @@ public class EternalGoal : Goal
     public override void printStatus()
     {
         if (completed == true)
-            {
-                Console.Write("[X] - ");
-            }
-            else
-            {
-                Console.Write("[ ] - ");
-            }
+        {
+            Console.Write("[X] - ");
+        }
+        else
+        {
+            Console.Write("[ ] - ");
+        }
         Console.Write($"{goalName}: ");
         Console.Write($"{goalDescription} ");
         Console.Write($"-- Times completed: {timesCompleted}");
         Console.WriteLine();
+    }
+    public override string getStringInfo()
+    {
+        string info = $"{goalType}:{goalName}&{goalDescription}&{pointAmount}&{completed}&{timesCompleted}";
+        return info;
     }
 }

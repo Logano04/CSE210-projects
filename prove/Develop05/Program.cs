@@ -39,17 +39,15 @@ class Program
                 }
                 break;
             case 2:
-                Console.WriteLine("case 2");
                 Goals.displayGoals();
                 break;
             case 3:
-                Console.WriteLine("case 3");
+                Goals.WriteFile();
                 break;
             case 4:
-                Console.WriteLine("case 4");
+                Goals.ReadFile();
                 break;
             case 5:
-                Console.WriteLine("case 5");
                 Console.WriteLine("Record event for which goal?");
                 Goals.listGoals();
                 break;

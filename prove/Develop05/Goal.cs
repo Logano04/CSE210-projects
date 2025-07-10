@@ -4,6 +4,7 @@ public class Goal
     public string goalDescription;
     public int pointAmount;
     public bool completed = false;
+    public string goalType = "SimpleGoal";
 
     public virtual void createGoal()
     {
@@ -44,8 +45,9 @@ public class Goal
             Console.WriteLine();
     }
 
-    public void saveGoal()
+    public virtual string getStringInfo()
     {
-
+        string info = $"{goalType}:{goalName}&{goalDescription}&{pointAmount}&{completed}";
+        return info;
     }
 }

@@ -1,3 +1,4 @@
+using System.IO;
 public class Goals
 {
     Goal goal = new Goal();
@@ -36,5 +37,29 @@ public class Goals
     public void printPoints()
     {
         Console.WriteLine($"Points: {points}");
+    }
+
+    public void WriteFile()
+    {
+        Console.WriteLine("What is the name of the file you want to write to?");
+        string filename = Console.ReadLine();
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            outputFile.WriteLine(points);
+            foreach (Goal goal in goalsList)
+            {
+                string goalInfo = goal.getStringInfo();
+                outputFile.WriteLine(goalInfo);
+            }
+        }
+    }
+    public void ReadFile()
+    {
+        Console.WriteLine("What is the name of the file you want to read from?");
+        string filename = Console.ReadLine();
+        {
+            string firstLine = File.ReadLines(filename).First();
+            points = int.Parse(firstLine);
+        }
     }
 }
