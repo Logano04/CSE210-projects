@@ -55,7 +55,7 @@ public class ChecklistGoal : Goal
     }
     public override string getStringInfo()
     {
-        string info = $"{goalType}:{goalName}&{goalDescription}&{pointAmount}&{completed}&{bonusPoints}&{requiredCompletions}&{timesCompleted}";
+        string info = $"{goalType}&{goalName}&{goalDescription}&{pointAmount}&{completed}&{bonusPoints}&{requiredCompletions}&{timesCompleted}";
         return info;
     }
 }

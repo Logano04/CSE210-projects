@@ -57,9 +57,7 @@ public class Goals
     {
         Console.WriteLine("What is the name of the file you want to read from?");
         string filename = Console.ReadLine();
-        {
-            string firstLine = File.ReadLines(filename).First();
-            points = int.Parse(firstLine);
-        }
+        string firstLine = File.ReadLines(filename).First();
+        points = int.Parse(firstLine);
     }
 }

@@ -1,2 +1,2 @@
-100
-SimpleGoal:poo&poopoo&100&True
+30
+SimpleGoal:finish book&finish reading a book&30&True

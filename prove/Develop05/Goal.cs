@@ -47,7 +47,7 @@ public class Goal
 
     public virtual string getStringInfo()
     {
-        string info = $"{goalType}:{goalName}&{goalDescription}&{pointAmount}&{completed}";
+        string info = $"{goalType}&{goalName}&{goalDescription}&{pointAmount}&{completed}";
         return info;
     }
 }

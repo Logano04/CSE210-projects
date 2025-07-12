@@ -41,7 +41,7 @@ public class EternalGoal : Goal
     }
     public override string getStringInfo()
     {
-        string info = $"{goalType}:{goalName}&{goalDescription}&{pointAmount}&{completed}&{timesCompleted}";
+        string info = $"{goalType}&{goalName}&{goalDescription}&{pointAmount}&{completed}&{timesCompleted}";
         return info;
     }
 }
