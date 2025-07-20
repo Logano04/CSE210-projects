@@ -1,7 +1,20 @@
 public class Customer
 {
-    public string name;
-    public Address address = new Address();
+    private string name;
+    private Address address;
 
-    public Customer(string customerName, )
+    public Customer(string customerName, Address customerAddress)
+    {
+        name = customerName;
+        address = customerAddress;
+    }
+    public string returnShippingLabelDetails()
+    {
+        return $"{name}\n{address.returnAddressString()}";
+    }
+
+    public bool livesInUS()
+    {
+        return address.isInUS();
+    }
 }
